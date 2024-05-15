@@ -1,0 +1,126 @@
+body {
+  background-image: url('./img/snake.png');
+  background-position: 50% -20%;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.76);
+  border-radius: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 900px;
+  width: 565px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  position: relative;
+  font-family: Arial;
+  font-weight: bolder;
+  color: #585858;
+  font-size: 18px;
+}
+.grid-container {
+  //margin:32px 43px 0 0;
+  display: grid;
+  width: 340px;
+  height: 330px;
+  background-color: rgb(178,189,8);
+  grid-template-columns: repeat(15, 21px);
+  grid-template-rows: repeat(15, 19px);
+  gap: 3px;
+  position: absolute;
+  top: 45px;
+  left: 104px;
+}
+#reset {
+  background-image: url("./img/press-btn.png");
+  opacity: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 38px;
+  width: 38px;
+  position: absolute;
+  bottom:407px;
+  left: 316px;
+  z-index: 10;
+  cursor: pointer;
+  transition: 1s ease-in-out linear;
+  &:active {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+}
+#up {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  bottom: 230px;
+  left:221px;
+  transition: 1s ease-in-out linear;
+  cursor: grab;
+}
+#down {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  bottom: 26px;
+  left:221px;
+  cursor: grab;
+}
+#left {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  bottom: 126px;
+  left: 116px;
+  cursor: grab;
+}
+#right {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  bottom: 126px;
+  right: 116px;
+  cursor: grab;
+}
+.grid-item {
+  background-color: #ddd;
+  border: 1px solid #fff;
+  border-radius: 2px;
+}
+.food {
+  background-image: url('https://png.pngtree.com/png-clipart/20201221/ourmid/pngtree-fresh-red-apple-on-transparent-background-png-image_2618371.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.snake {
+  background-color: darkgray;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("./img/press-btn.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(0.95);
+}
+#score {
+  position: absolute;
+  top: 384px;
+  left: 250px;
+}
+#highScore {
+  position: absolute;
+  top: 410px;
+  left: 250px;
+}
