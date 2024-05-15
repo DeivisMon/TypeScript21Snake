@@ -102,7 +102,7 @@ body {
 .grid-item {
   background-color: #ddd;
   border: 1px solid #fff;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .food {

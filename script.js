@@ -83,7 +83,7 @@ function moveSnake() {
     if (
         head.x < 0 || head.y < 0 || head.x >= gridSize || head.y >= gridSize
     ) {
-        // Wrap around walls
+
         head.x = (head.x + gridSize) % gridSize;
         head.y = (head.y + gridSize) % gridSize;
     }
@@ -124,9 +124,8 @@ function changeDirection(event) {
     if (!gameInterval) {
         gameInterval = setInterval(moveSnake, 200);
     }
-    // Remove active class from all buttons
+
     buttons.forEach(button => button.classList.remove("active"));
-    // Add active class to the pressed button
     event.target.classList.add("active");
 }
 
@@ -138,7 +137,6 @@ buttons.forEach(button => {
     button.addEventListener("click", changeDirection);
 });
 
-// Add event listener for arrow keys
 document.addEventListener("keydown", event => {
     switch (event.key) {
         case "ArrowUp":
